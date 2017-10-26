@@ -23,12 +23,12 @@
 	<parent>
 		<groupId>de.fau.cs.osr</groupId>
 		<artifactId>tooling</artifactId>
-		<version>3.0.8</version>
+		<version>3.0.9-SNAPSHOT</version>
 	</parent>
 
 	<groupId>org.sweble</groupId>
 	<artifactId>sweble-parent</artifactId>
-	<version>3.1.6</version>
+	<version>3.1.7-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Sweble Parent</name>
 	<inceptionYear>2010</inceptionYear>
@@ -37,9 +37,7 @@
 	</description>
 
 	<modules>
-		<module>sweble-engine-parent</module>
 		<module>sweble-wikitext-components-parent</module>
-		<module>sweble-wom3-parent</module>
 	</modules>
 
 	<!-- =================================================================== -->
@@ -55,9 +53,9 @@
 		<maven-checkstyle-plugin.skip>true</maven-checkstyle-plugin.skip>
 
 		<!-- Dependencies -->
-		<osr-common.version>3.0.8</osr-common.version>
+		<osr-common.version>3.0.9-SNAPSHOT</osr-common.version>
 		<!-- Should be ${project.version} but that causes trouble with the release plugin -->
-		<sweble.version>3.1.6</sweble.version>
+		<sweble.version>3.1.7-SNAPSHOT</sweble.version>
 	</properties>
 
 	<!-- =================================================================== -->
@@ -152,42 +150,6 @@
 				<version>${sweble.version}</version>
 			</dependency>
 
-			<!-- =========================================================== -->
-			<!-- WOM v3 - WOM v3 - WOM v3 - WOM v3 - WOM v3 - WOM v3 - WOM v -->
-			<!-- =========================================================== -->
-
-			<!-- Sweble - WOM 3.0 Core -->
-			<dependency>
-				<groupId>org.sweble.wom3</groupId>
-				<artifactId>sweble-wom3-core</artifactId>
-				<version>${sweble.version}</version>
-			</dependency>
-
-			<!-- Sweble - WOM 3.0 JSON Tools -->
-			<dependency>
-				<groupId>org.sweble.wom3</groupId>
-				<artifactId>sweble-wom3-json-tools</artifactId>
-				<version>${sweble.version}</version>
-			</dependency>
-
-			<!-- Sweble WOM 3.0 - SWC Adapter -->
-			<dependency>
-				<groupId>org.sweble.wom3</groupId>
-				<artifactId>sweble-wom3-swc-adapter</artifactId>
-				<version>${sweble.version}</version>
-			</dependency>
-			
-			<!-- =========================================================== -->
-			<!-- Engine - Engine - Engine - Engine - Engine - Engine - Engin -->
-			<!-- =========================================================== -->
-			
-			<!-- Sweble Engine - Serialization -->
-			<dependency>
-				<groupId>org.sweble.engine</groupId>
-				<artifactId>sweble-engine-serialization</artifactId>
-				<version>${sweble.version}</version>
-			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
 
@@ -247,7 +209,7 @@
 		<connection>scm:git://git@github.com/sweble/sweble-parent.git</connection>
 		<developerConnection>scm:git://git@mojo-forge.cs.fau.de/sweble-public/sweble-parent.git</developerConnection>
 		<url>https://github.com/sweble/sweble-parent</url>
-		<tag>sweble-wikitext-3.1.6</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<!-- This is needed since SNAPSHOTs wouldn't find their parent pom otherwise -->
